@@ -1,0 +1,124 @@
+/* Base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #4caf50;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Spinner styles */
+.spinner {
+    border: 6px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 6px solid white;
+    width: 60px;
+    height: 60px;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Results styling */
+.result {
+    margin-top: 30px;
+}
+
+.result h2 {
+    margin-bottom: 15px;
+}
+
+.result ul {
+    list-style: none;
+    padding: 0;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.result ul li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
